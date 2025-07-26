@@ -1,0 +1,32 @@
+{
+    "language": {
+        "multilingual": true,
+        "supported": [
+            "zh",
+            "en",
+            "fr",
+            "ja",
+            "ko",
+            "de"
+        ]
+    },
+    "entrypoint": { 
+        "input_folder_path": "examples",
+        "SAMPLE_RATE": 22050
+    },
+    "separate": {
+        "step1": {
+            "model_path": "models/UVR-MDX-NET-Inst_HQ_3.onnx",
+            "denoise": true,
+            "margin": 44100,
+            "chunks": 15,
+            "n_fft": 6144,
+            "dim_t": 8,
+            "dim_f": 3072
+        }
+    },
+    "mos_model": { 
+        "primary_model_path": "/gscratch/tial/junkaiwu/workspace/Amphion/preprocessors/Emilia/ckpts/sig_bak_ovr.onnx"
+    },
+    "huggingface_token": "<your hf token>"
+}
